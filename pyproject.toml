@@ -3,7 +3,7 @@ name = "travel-agent-api"
 version = "0.1.0"
 description = "Travel Agent API - assistente viaggi con FastAPI e LangChain"
 authors = [
-    {name = "Marco",email = "tua_email@example.com"}
+    {name = "Marco", email = "marcotemperato@users.noreply.github.com"}
 ]
 requires-python = ">=3.10,<4.0"
 dependencies = [

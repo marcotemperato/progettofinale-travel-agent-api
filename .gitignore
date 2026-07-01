@@ -5,3 +5,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Materiali corso / estrazioni temporanee
+*.pdf
+extract_*.txt
+_extracted_pdfs.txt
+pdf*.txt

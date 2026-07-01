@@ -6,7 +6,7 @@ from travel_agent_api.services.agent_service import Agent
 router = APIRouter()
 
 
-class ChatComplentionRequest(BaseModel):
+class ChatCompletionRequest(BaseModel):
     messages: list
 
     model_config = {
@@ -24,7 +24,7 @@ class ChatComplentionRequest(BaseModel):
 
 
 @router.post("/travel-agent")
-def chat_completion(request: ChatComplentionRequest):
+def chat_completion(request: ChatCompletionRequest):
     """
     Endpoint per la gestione delle richieste di chat.
     Processa i messaggi ricevuti e restituisce una risposta dall'agente di viaggio.

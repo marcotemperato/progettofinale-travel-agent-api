@@ -4,6 +4,8 @@ Progetto finale **Specializzazione Agentic AI & Python** — assistente viaggi c
 
 L'API espone un endpoint chat usato dal client web **Laravel** (`web_TravelAgent`) per pianificare viaggi: voli, hotel, itinerari e contenuti storici.
 
+**Repository:** https://github.com/marcotemperato/progettofinale-travel-agent-api
+
 ---
 
 ## Architettura
@@ -57,8 +59,6 @@ poetry run uvicorn travel_agent_api.main:app --reload --port 8080
 
 Verifica: http://127.0.0.1:8080/docs
 
-> **Importante:** esegui sempre i comandi Poetry dalla cartella `travel-agent-api`, non da `progetto-finale`.
-
 ---
 
 ## Setup client Laravel (test end-to-end)
@@ -77,7 +77,7 @@ Opzionale (asset CSS/JS):
 
 ```powershell
 npm install
-npm run dev
+node .\node_modules\vite\bin\vite.js build
 ```
 
 Apri: http://localhost:8000
@@ -101,7 +101,6 @@ travel-agent-api/
 │       ├── hotels_finder.py
 │       ├── chain_travel_plan.py
 │       └── chain_historical_expert.py
-├── tests/
 ├── .env.example
 ├── pyproject.toml
 ├── poetry.lock
@@ -110,7 +109,7 @@ travel-agent-api/
 
 ---
 
-## Modifiche apportate rispetto ai PDF del corso
+## Modifiche apportate rispetto al codice base del corso
 
 | File | Modifica |
 |------|----------|
@@ -185,12 +184,7 @@ http://localhost:8000 — scrivi nella chat e osserva il terminale API.
 | `WinError 10013` porta 8080 | Chiudi processo precedente: `netstat -ano \| findstr ":8080"` poi `taskkill /PID <pid> /F` |
 | Chat Laravel senza risposta AI | Verifica API su :8080 e chiavi in `.env` |
 | `RequestsDependencyWarning` | Warning innocuo, ignorabile |
-
----
-
-## Documentazione corso
-
-I PDF guida (01–06) sono nella root di questa cartella.
+| `Vite manifest not found` (Laravel) | Esegui `node .\node_modules\vite\bin\vite.js build` in `web_TravelAgent` |
 
 ---
 
